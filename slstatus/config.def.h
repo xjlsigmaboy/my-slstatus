@@ -65,11 +65,9 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-	{ kernel_release, "  Kernel:[%s]  ",   NULL    },
-	{ keymap,   "  Keymap:[%s]  ",	       NULL    },
-	{ cpu_perc, "  CPU:[%s%% - ",	       NULL    },
-	{ cpu_freq, "%s]  ",       	       NULL    },
-	{ ram_perc, "  RAM:[%s%%]  ",	       NULL    },
-	{ uptime,   "  Uptime:[%s]  ",           NULL    },
-	{ datetime, "  [%s]  ",           "%F %T" },
+	{ cpu_perc, "CPU:%s%%",		NULL	},
+	{ keymap,   " - %s",		NULL	},
+	{ ram_perc, " - RAM:%s%%",	NULL    },
+	{ run_command, " - VOL:%s%%",	"pamixer --get-volume"},
+	{ datetime, " - %s ",           "%F %T" },
 };
